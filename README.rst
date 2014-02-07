@@ -23,21 +23,25 @@ Installation
 ------------
 
 If you don't already have it, install ``flake8``::
+
     $ pip install flake8
 
 Then, install the extension::
+
     $ pip install flake8-blind-except
 
 Usage
 -----
 
 Run the following to verify that the plugin has been installed correctly::
+
     $ flake8 --version
     2.0 (pep8: 1.4.6, flake8-blind-except: 0.1.0, pyflakes: 0.7.3)
 
 Now, when you run ``flake8``, the plugin will automatically be used.
 
 When a blind except is found, ``flake8`` will output::
+
     B901 blind except: statement
 
 

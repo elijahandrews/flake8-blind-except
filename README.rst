@@ -37,6 +37,11 @@ Run the following to verify that the plugin has been installed correctly::
 
 Now, when you run ``flake8``, the plugin will automatically be used.
 
+When a blind except is found, ``flake8`` will output::
+    B901 blind except: statement
+
+
+
 Changes
 ------
 

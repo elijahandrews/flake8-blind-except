@@ -8,7 +8,7 @@ def get_version(fname='flake8_blind_except.py'):
 
 def get_long_description():
     descr = []
-    for fname in ('README.md',):
+    for fname in ('README.rst',):
         with open(fname) as f:
             descr.append(f.read())
     return '\n\n'.join(descr)

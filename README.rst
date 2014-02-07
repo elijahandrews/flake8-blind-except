@@ -56,4 +56,4 @@ Changes
 Notes
 -----
 
-I've tested this package with flake8 2.0 and Python 2.7. It is untested, but likely compatible with other versions.
+I've tested this package with flake8 2.0 and Python 2.7.3. It is untested (but likely compatible) with other software versions.

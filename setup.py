@@ -6,10 +6,19 @@ def get_version(fname='flake8_blind_except.py'):
             if line.startswith('__version__'):
                 return eval(line.split('=')[-1])
 
+def get_long_description():
+    descr = []
+    for fname in ('README.md',):
+        with open(fname) as f:
+            descr.append(f.read())
+    return '\n\n'.join(descr)
 
 
 setup(
     name='flake8-blind-except',
+    description='A flake8 extension that checks for blind except: statements',
+    long_description=get_long_description(),
+    keywords='flake8 except exception',
     version=get_version(),
     author='Elijah Andrews',
     author_email='elijahcandrews@gmail.com',
@@ -20,7 +29,6 @@ setup(
         ],
     },
     url='https://github.com/elijahandrews/flake8-blind-except',
-    description='A flake8 extension that checks for blind except statements',
     license='MIT',
     py_modules=['flake8_blind_except'],
     zip_safe=False,

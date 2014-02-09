@@ -49,7 +49,7 @@ When a blind except is found, ``flake8`` will output::
 Changes
 ------
 
-0.1.03 - 2014-02-07
+0.1.0 - 2014-02-07
 ``````````````````
 * Initial release
 

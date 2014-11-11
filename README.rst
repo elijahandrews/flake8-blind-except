@@ -3,7 +3,7 @@ flake8-blind-except
 
 A flake8 extension that checks for blind ``except:`` statements.
 
-Using ``except`` without explicitly specifying which exceptions to catch is generally considered back practice.
+Using ``except`` without explicitly specifying which exceptions to catch is generally considered bad practice.
 
 An example of code that will fail this check is::
 

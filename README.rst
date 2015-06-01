@@ -5,14 +5,18 @@ A flake8 extension that checks for blind ``except:`` statements.
 
 Using ``except`` without explicitly specifying which exceptions to catch is generally considered bad practice.
 
-An example of code that will fail this check is::
+An example of code that will fail this check is:
+
+.. code-block:: python
 
     try:
         something_scary()
     except:
         everybody_panic()
 
-However, the following code is valid::
+However, the following code is valid:
+
+.. code-block:: python
 
     try:
         something_terrifying()

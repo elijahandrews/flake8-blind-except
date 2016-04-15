@@ -5,6 +5,7 @@ __version__ = '0.1.0'
 
 BLIND_EXCEPT_REGEX = re.compile(r'(except:)')  # noqa
 
+
 def check_blind_except(physical_line):
     if pep8.noqa(physical_line):
         return

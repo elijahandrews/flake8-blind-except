@@ -1,9 +1,11 @@
 flake8-blind-except
 ===================
 
-A flake8 extension that checks for blind ``except:`` statements.
+A flake8 extension that checks for blind, catch-all ``except:`` statements.
 
-Using ``except`` without explicitly specifying which exceptions to catch is generally considered bad practice.
+Using ``except`` without explicitly specifying which exceptions to catch is generally considered bad practice, since it catches system signals like ``SIGINT``. You probably want to handle system interrupts differently than exceptions occuring in your code.
+
+It's also usually better style to have many small try-except blocks catching specific exceptions instead of a giant try block with a catch-all except at the bottom. It's also nicer to your fellow programmers to be a bit more specific about what exceptions they can expect in specific parts of the code, and what the proper course of action is when they occur.
 
 An example of code that will fail this check is:
 
@@ -20,7 +22,7 @@ However, the following code is valid:
 
     try:
         something_terrifying()
-    except Exception:
+    except TerrifyingException:
         dont_panic()
 
 Installation

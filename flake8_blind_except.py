@@ -1,4 +1,8 @@
-import pep8
+
+try:
+    import pycodestyle
+except ImportError:
+    import pep8 as pycodestyle
 import re
 
 __version__ = '0.1.0'
@@ -7,7 +11,7 @@ BLIND_EXCEPT_REGEX = re.compile(r'(except:)')  # noqa
 
 
 def check_blind_except(physical_line):
-    if pep8.noqa(physical_line):
+    if pycodestyle.noqa(physical_line):
         return
     match = BLIND_EXCEPT_REGEX.search(physical_line)
     if match:

@@ -55,6 +55,10 @@ When a blind except is found, ``flake8`` will output::
 Changes
 ------
 
+0.1.1 - 2016-06-27
+``````````````````
+* ``pep8`` was renamed to ``pycodestyle`` in its 2.0 release. Compatibility update for this change
+
 0.1.0 - 2014-02-07
 ``````````````````
 * Initial release
@@ -62,4 +66,4 @@ Changes
 Notes
 -----
 
-I've tested this package with flake8 2.0 and Python 2.7.3. It is untested (but likely compatible) with other software versions.
+I've tested this package with flake8 2.6.2 and Python 2.7.3. It is untested (but likely compatible) with other software versions.

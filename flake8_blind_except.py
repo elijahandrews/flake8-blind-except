@@ -5,7 +5,7 @@ except ImportError:
     import pep8 as pycodestyle
 import re
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 BLIND_EXCEPT_REGEX = re.compile(r'(except:)')  # noqa
 

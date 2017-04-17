@@ -50,7 +50,10 @@ When a blind except is found, ``flake8`` will output::
 
     B901 blind except: statement
 
+Contributing
+------------
 
+I'm not working on Python these days, so probably won't be making updates anytime soon. PRs are welcome though!
 
 Changes
 ------

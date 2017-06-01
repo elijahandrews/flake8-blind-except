@@ -22,7 +22,6 @@ setup(
     version=get_version(),
     author='Elijah Andrews',
     author_email='elijahcandrews@gmail.com',
-    install_requires=['setuptools'],
     entry_points={
         'flake8.extension': [
             'B90 = flake8_blind_except:check_blind_except'

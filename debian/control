@@ -1,0 +1,23 @@
+Source: python3-flake8-blind-except
+Section: python
+Priority: optional
+Maintainer: Jeffrey Cliff <jeffrey.cliff@gmail.com>
+Uploaders: Jeffrey Cliff <jeffrey.cliff@gmail.com>
+Build-Depends: debhelper (>= 8), dh-python, python3-all, python3(>= 3.3), python3-setuptools
+Standards-Version: 3.9.8
+Homepage: https://github.com/elijahandrews/flake8-blind-except
+
+Package: python3-flake8-blind-except
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}, python3-pkg-resources, python3-setuptools
+Description:  flake8 extension that checks for blind, catch-all except statements
+ Using except without explicitly specifying which exceptions to catch is
+ generally considered bad practice, since it catches system signals like 
+ SIGINT. You probably want to handle system interrupts differently than 
+ exceptions occurring in your code.
+ It's also usually better style to have many small try-except blocks 
+ catching specific exceptions instead of a giant try: block with a catch-all
+ except: at the bottom. It's also nicer to your fellow programmers to be a 
+ bit more specific about what exceptions they can expect in specific parts of 
+ the code, and what the proper course of action is when they occur.
+

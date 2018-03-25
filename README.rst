@@ -1,5 +1,8 @@
+
 flake8-blind-except
 ===================
+
+**This plugin has been deprecated; please use `E722<https://github.com/PyCQA/pycodestyle/commit/543f12b06592c53e2e60edc4846ee02ab9550e8b>`_ instead.**
 
 A flake8 extension that checks for blind, catch-all ``except:`` statements.
 

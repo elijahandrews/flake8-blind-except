@@ -23,7 +23,7 @@ def check_blind_except(physical_line):
     (0, 'B902 blind except Exception: statement')
     >>> check_blind_except('except BaseException as exc:')
     (0, 'B902 blind except Exception: statement')
-    >>> check_blind_except('except GoodException as exc:')
+    >>> check_blind_except('except GoodException as exc:  # except:')
     >>> check_blind_except('except ExceptionGood as exc:')
     >>> check_blind_except('except Exception')  # only trigger with trailing colon
     >>> check_blind_except('some code containing except: in string')

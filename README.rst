@@ -50,17 +50,30 @@ When a blind except is found, ``flake8`` will output::
 
     B901 blind except: statement
 
+or::
+
+    B902 blind except Exception: statement
+
 Contributing
 ------------
 
 I'm not working on Python these days, so probably won't be making updates anytime soon. PRs are welcome though!
 
+Testing
+-------
+
+Tests can be run with ``pytest --doctest-modules flake8_blind_except.py``.
+
 Changes
 ------
 
+0.2.0 - 2021-01-07
+``````````````````
+* B902 error added for cases where a blind ``Exception`` is caught.
+
 0.1.1 - 2016-06-27
 ``````````````````
-* ``pep8`` was renamed to ``pycodestyle`` in its 2.0 release. Compatibility update for this change
+* ``pep8`` was renamed to ``pycodestyle`` in its 2.0 release. Compatibility update for this change.
 
 0.1.0 - 2014-02-07
 ``````````````````
@@ -69,4 +82,4 @@ Changes
 Notes
 -----
 
-I've tested this package with flake8 2.6.2 and Python 2.7.3. It is untested (but likely compatible) with other software versions.
+I've tested this package with flake8 2.6.2 + Python 2.7.3 and flake8 3.7.9 + Python 3.7.5.

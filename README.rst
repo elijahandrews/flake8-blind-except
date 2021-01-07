@@ -1,7 +1,9 @@
 flake8-blind-except
 ===================
 
-A flake8 extension that checks for blind, catch-all ``except:`` statements.
+A flake8 extension that checks for blind, catch-all ``except:`` and ``except Exception:`` statements.
+
+**As of [`pycodestyle>=2.1.0`](https://github.com/PyCQA/pycodestyle/commit/543f12b06592c53e2e60edc4846ee02ab9550e8b), "E722 do not use bare except, specify exception instead" is built-in.** However, bare `Exception` and `BaseException` are still allowed. This extension flags them as `B902`.
 
 Using ``except`` without explicitly specifying which exceptions to catch is generally considered bad practice, since it catches system signals like ``SIGINT``. You probably want to handle system interrupts differently than exceptions occuring in your code.
 

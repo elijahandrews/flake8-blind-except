@@ -6,7 +6,7 @@ import re
 
 __version__ = '0.2.0'
 
-BLIND_EXCEPT_REGEX = re.compile(r'(^[ \t]*except(.*\bException\b.*)?:)')  # noqa
+BLIND_EXCEPT_REGEX = re.compile(r'(^[ \t]*except(.*\b(Base)?Exception\b.*)?:)')  # noqa
 
 def check_blind_except(physical_line):
     """Check for blind except statements.
@@ -21,10 +21,12 @@ def check_blind_except(physical_line):
     (0, 'B902 blind except Exception: statement')
     >>> check_blind_except('except Exception, ValueError as exc:')
     (0, 'B902 blind except Exception: statement')
+    >>> check_blind_except('except BaseException as exc:')
+    (0, 'B902 blind except Exception: statement')
     >>> check_blind_except('except GoodException as exc:')
     >>> check_blind_except('except ExceptionGood as exc:')
     >>> check_blind_except('except Exception')  # only trigger with trailing colon
-    >>> check_blind_except('some code containing "except:" string')
+    >>> check_blind_except('some code containing except: in string')
     """
     if pycodestyle.noqa(physical_line):
         return

@@ -69,6 +69,10 @@ Tests can be run with ``pytest --doctest-modules flake8_blind_except.py``.
 Changes
 -------
 
+0.2.1 - 2022-03-08
+``````````````````
+* Remove setuptools from install_requires (#8)
+
 0.2.0 - 2021-01-07
 ``````````````````
 * B902 error added for cases where a blind ``Exception`` is caught.

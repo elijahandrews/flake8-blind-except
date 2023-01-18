@@ -24,7 +24,7 @@ setup(
     author_email='elijahcandrews@gmail.com',
     entry_points={
         'flake8.extension': [
-            'B90 = flake8_blind_except:check_blind_except'
+            'BLE90 = flake8_blind_except:check_blind_except'
         ],
     },
     url='https://github.com/elijahandrews/flake8-blind-except',

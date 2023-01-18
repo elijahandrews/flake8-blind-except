@@ -1,0 +1,18 @@
+[build-system]
+requires = ["flit_core >=3.8,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "flake8-blind-except"
+authors = [{name = "Elijah Andrews", email = "elijahcandrews@gmail.com"}]
+readme = "README.rst"
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
+dynamic = ["version", "description"]
+keywords = ["flake8", "except", "exception"]
+
+[project.urls]
+Home = "https://github.com/elijahandrews/flake8-blind-except"
+
+[project.entry-points."flake8.extension"]
+B90 = "flake8_blind_except:check_blind_except"

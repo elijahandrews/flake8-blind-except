@@ -1,3 +1,4 @@
+"""A flake8 extension that checks for blind except: statements."""
 try:
     import pycodestyle
 except ImportError:
